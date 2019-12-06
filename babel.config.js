@@ -1,4 +1,6 @@
 module.exports = function (api) {
+  const isTest = api.env('test')
+
   api.cache(true)
 
   const presets = [
@@ -7,14 +9,15 @@ module.exports = function (api) {
       {
         // useBuiltIns: 'entry',
         // corejs: 3,
+        loose: true,
         modules: false,
         targets: '>1%',
       },
     ],
     '@babel/preset-react',
-    '@emotion/babel-preset-css-prop'
   ]
   const plugins = [["module-resolver", {"root": ["./src"]}]]
+  if (isTest) plugins.push(["@babel/transform-modules-commonjs"])
 
   return {
     presets,

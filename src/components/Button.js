@@ -1,5 +1,6 @@
+/** @jsx jsx */
 import React from "react"
-import {css} from '@emotion/core'
+import {jsx, css} from '@emotion/core'
 import {font, shape, primaryColors} from 'config/styles'
 
 const style = css(
@@ -8,8 +9,8 @@ const style = css(
   primaryColors
 )
 
-const Button = ({text}) => {
-  return (<button css={style}>{text}</button>)
+const Button = ({text, onClick}) => {
+  return (<button css={style} onClick={onClick}>{text}</button>)
 }
 
 export default Button
