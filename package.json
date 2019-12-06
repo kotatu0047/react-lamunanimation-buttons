@@ -1,0 +1,34 @@
+{
+  "name": "react-lamunanimation-buttons",
+  "version": "0.0.1-beta",
+  "description": "ReactJS Components of funky svg buttons",
+  "main": "dist/index.js",
+  "browser": "dist/index.js",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "type": "module",
+  "private": false,
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aclearworld/react-lamunanimation-buttons.git"
+  },
+  "keywords": [
+    "svg",
+    "animation",
+    "react",
+    "button",
+    "Components Library"
+  ],
+  "files": [
+    "dist/**/*"
+  ],
+  "author": "kotatu <yamamichi1995@outlook.jp> (https://github.com/aclearworld)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/aclearworld/react-lamunanimation-buttons/issues"
+  },
+  "homepage": "https://github.com/aclearworld/react-lamunanimation-buttons#readme"
+}
