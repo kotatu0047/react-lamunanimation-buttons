@@ -26,5 +26,13 @@ describe("Button", () => {
     const component = getByText(container, "We Salute You!")
 
     expect(component).toHaveStyleRule("text-transform", "uppercase")
+    expect(component).toHaveStyleRule("font-size", "1.5em")
+    expect(component).toHaveStyleRule("font-weight", "bold")
+    expect(component).toHaveStyleRule("letter-spacing", '4px')
+    expect(component).toHaveStyleRule("border", "none")
+    expect(component).toHaveStyleRule("border-radius", '5px')
+    expect(component).toHaveStyleRule("padding", "10px 20px")
+    expect(component).toHaveStyleRule("background", "#5cdb95")
+    expect(component).toHaveStyleRule("color", "#05385b")
   })
 })
