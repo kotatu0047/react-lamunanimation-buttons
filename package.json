@@ -1,6 +1,6 @@
 {
   "name": "react-lamunanimation-buttons",
-  "version": "0.0.1-beta",
+  "version": "0.1.0-beta",
   "description": "ReactJS Components of funky svg buttons",
   "main": "dist/index.js",
   "browser": "dist/index.js",
@@ -9,8 +9,15 @@
   "type": "module",
   "private": false,
   "scripts": {
+    "start": "styleguidist server",
+    "prebuild": "rimraf dist",
+    "build": "npm-run-all --parallel test:no-coverage rollup",
+    "test:no-coverage": "jest --no-coverage",
+    "rollup": "rollup -c",
+    "postbuild": "echo \"build sucees!!\" ",
     "test": "jest",
-    "start": "styleguidist server"
+    "test:dev": "jest --watch --no-coverage",
+    "prepublishOnly": "npm run build"
   },
   "repository": {
     "type": "git",
@@ -24,7 +31,7 @@
     "Components Library"
   ],
   "files": [
-    "dist/**/*"
+    "/dist"
   ],
   "author": "kotatu <yamamichi1995@outlook.jp> (https://github.com/aclearworld)",
   "license": "MIT",
@@ -33,9 +40,9 @@
   },
   "homepage": "https://github.com/aclearworld/react-lamunanimation-buttons#readme",
   "peerDependencies": {
-    "@emotion/core": "^10.x",
-    "react": ">= 16.8.6",
-    "react-dom": ">= 16.8.6"
+    "@emotion/core": ">= 10.0.0",
+    "react": ">= 16.8.0",
+    "react-dom": ">= 16.8.0"
   },
   "devDependencies": {
     "@babel/core": "^7.7.4",
@@ -46,12 +53,18 @@
     "@testing-library/react": "^9.3.2",
     "babel-jest": "^24.9.0",
     "babel-loader": "^8.0.6",
-    "babel-plugin-module-resolver": "^3.2.0",
     "jest": "^24.9.0",
     "jest-emotion": "^10.0.26",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "react-styleguidist": "^10.2.1",
-    "webpack": "^4.41.2"
+    "rollup": "^1.27.8",
+    "rollup-plugin-babel": "^4.3.3",
+    "rollup-plugin-commonjs": "^10.1.0",
+    "rollup-plugin-node-resolve": "^5.2.0",
+    "rollup-plugin-peer-deps-external": "^2.2.0",
+    "webpack": "^4.41.2",
+    "rimraf": "^3.0.0",
+    "npm-run-all": "^4.1.5"
   }
 }

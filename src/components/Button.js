@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import React from "react"
 import {jsx, css} from '@emotion/core'
-import {font, shape, primaryColors} from 'config/styles'
+import {font, shape, primaryColors} from '../config/styles'
 
 const style = css(
   font,
