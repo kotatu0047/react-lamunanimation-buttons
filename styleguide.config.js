@@ -1,3 +1,5 @@
+const path = require('path')
+
 module.exports = {
   components: 'src/components/**/*.{js,jsx,ts,tsx}',
   webpackConfig: {
@@ -11,4 +13,9 @@ module.exports = {
       ]
     }
   },
+  title: "react-lamunanimation-buttons Components Library",
+  styleguideDir: "dist-docs",
+  moduleAliases: {
+    "react-lamunanimation-buttons": path.resolve(__dirname, "src")
+  }
 }
