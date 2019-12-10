@@ -1,25 +1,15 @@
-import babel from 'rollup-plugin-babel'
-import resolve from 'rollup-plugin-node-resolve'
-import commonjs from 'rollup-plugin-commonjs'
-import external from "rollup-plugin-peer-deps-external"
-import postcss from 'rollup-plugin-postcss'
-import pkg from './package.json'
+const babel = require('rollup-plugin-babel')
+const resolve = require('rollup-plugin-node-resolve')
+const commonjs = require('rollup-plugin-commonjs')
+const external = require('rollup-plugin-peer-deps-external')
+const postcss = require('rollup-plugin-postcss')
+const babelConfig = require('./babel.config')
+const pkg = require('./package.json')
 
 const input = 'src/index.js'
 const extensions = ['js', 'jsx', '.ts', 'tsx']
-const babelPresets = [
-  [
-    '@babel/preset-env',
-    {
-      loose: true,
-      modules: false,
-      targets: '>1%',
-    },
-  ],
-  '@babel/preset-react',
-]
 
-export default [
+module.exports = [
   {
     input,
     output: {
@@ -32,8 +22,8 @@ export default [
       babel({
         babelrc: false,
         extensions,
-        presets: babelPresets,
-        plugins: [],
+        presets: babelConfig.presets,
+        plugins: babelConfig.plugins,
         exclude: 'node_modules/**',
       }),
       external(),

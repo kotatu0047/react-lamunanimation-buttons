@@ -2,16 +2,23 @@ const presets = [
   [
     '@babel/preset-env',
     {
-      // useBuiltIns: 'entry',
-      // corejs: 3,
+      corejs: 2,
       loose: true,
       modules: false,
       targets: '>1%',
+      useBuiltIns: "usage"
     },
   ],
   '@babel/preset-react',
 ]
-const plugins = []
+const plugins = [
+  ['@babel/proposal-class-properties', {loose: true}],
+  ['@babel/proposal-object-rest-spread', {loose: true}],
+  ['@babel/plugin-transform-parameters', {loose: true}],
+]
+
+exports.presets = presets
+exports.plugins = plugins
 
 module.exports = function (api) {
   // api.cache(true)
