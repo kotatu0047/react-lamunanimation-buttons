@@ -1,2 +1,2 @@
 # react-lamunanimation-buttons
-ReactJS Components of funky svg buttons
+ReactJS Components of amusing svg buttons

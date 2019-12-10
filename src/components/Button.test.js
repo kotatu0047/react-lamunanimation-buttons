@@ -21,18 +21,12 @@ describe("Button", () => {
     expect(onClickMock).toBeCalled()
   })
 
-  test("should make text uppercase", () => {
+  test("has css classNames", () => {
     const {container} = render(<Button text="We Salute You!"/>)
     const component = getByText(container, "We Salute You!")
 
-    expect(component).toHaveStyleRule("text-transform", "uppercase")
-    expect(component).toHaveStyleRule("font-size", "1.5em")
-    expect(component).toHaveStyleRule("font-weight", "bold")
-    expect(component).toHaveStyleRule("letter-spacing", '4px')
-    expect(component).toHaveStyleRule("border", "none")
-    expect(component).toHaveStyleRule("border-radius", '5px')
-    expect(component).toHaveStyleRule("padding", "10px 20px")
-    expect(component).toHaveStyleRule("background", "#5cdb95")
-    expect(component).toHaveStyleRule("color", "#05385b")
+    expect(component.classList.contains('primaryColors')).toBe(true)
+    expect(component.classList.contains('shape')).toBe(true)
+    expect(component.classList.contains('font')).toBe(true)
   })
 })
