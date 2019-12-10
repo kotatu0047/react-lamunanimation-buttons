@@ -1,15 +1,20 @@
-import React from "react"
+import React from 'react'
 import styles from './Button.css'
 
 type Props = {
-  text: string;
-  onClick?: () => void;
+  text: string
+  onClick?: () => void
 }
 
-const Button: React.FC<Props> = ({text, onClick}) => {
+const Button: React.FC<Props> = ({ text, onClick }) => {
   return (
-    <button className={`${styles.primaryColors} ${styles.shape} ${styles.font}`}
-            onClick={onClick}>{text}</button>
+    <button
+      type="button"
+      className={`${styles.primaryColors} ${styles.shape} ${styles.font}`}
+      onClick={onClick}
+    >
+      {text}
+    </button>
   )
 }
 

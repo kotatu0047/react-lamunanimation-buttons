@@ -17,7 +17,7 @@ module.exports = [
       file: pkg.module,
       format: 'esm',
       exports: 'named',
-      sourcemap: true
+      sourcemap: true,
     },
     plugins: [
       babel({
@@ -29,7 +29,7 @@ module.exports = [
         exclude: 'node_modules/**',
       }),
       external(),
-      resolve({extensions}),
+      resolve({ extensions }),
       commonjs({
         include: 'node_modules/**',
         extensions: ['.js', '.coffee'],
@@ -39,10 +39,9 @@ module.exports = [
         ignore: ['conditional-runtime-dependency'],
       }),
       postcss({
-          plugins: [],
-          modules: true,
-        }
-      ),
+        plugins: [],
+        modules: true,
+      }),
       typescript(),
     ],
   },
