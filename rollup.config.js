@@ -3,10 +3,11 @@ const resolve = require('rollup-plugin-node-resolve')
 const commonjs = require('rollup-plugin-commonjs')
 const external = require('rollup-plugin-peer-deps-external')
 const postcss = require('rollup-plugin-postcss')
+const typescript = require('@rollup/plugin-typescript')
 const babelConfig = require('./babel.config')
 const pkg = require('./package.json')
 
-const input = 'src/index.js'
+const input = 'src/index.ts'
 const extensions = ['js', 'jsx', '.ts', 'tsx']
 
 module.exports = [
@@ -22,6 +23,7 @@ module.exports = [
       babel({
         babelrc: false,
         extensions,
+        runtimeHelpers: true,
         presets: babelConfig.presets,
         plugins: babelConfig.plugins,
         exclude: 'node_modules/**',
@@ -40,7 +42,8 @@ module.exports = [
           plugins: [],
           modules: true,
         }
-      )
+      ),
+      typescript(),
     ],
   },
 ]

@@ -14,7 +14,7 @@ describe("Button", () => {
     const {container} = render(
       <Button text="Click me, maybe?" onClick={onClickMock}/>
     )
-    const component = container.firstChild
+    const component = getByText(container, "Click me, maybe?")
 
     fireEvent.click(component)
 

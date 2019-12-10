@@ -21,6 +21,7 @@ exports.presets = presets
 exports.plugins = plugins
 
 module.exports = function (api) {
+  presets.push(['@babel/preset-typescript'])
   // api.cache(true)
   const isTest = api.env('test')
   if (isTest) plugins.push(["@babel/transform-modules-commonjs"])
