@@ -28,8 +28,6 @@ jobs:
         run: |
           chmod 777 ./addGitTag.sh
           sudo ./addGitTag.sh
-      - name: build
-        run: npm run build
       - name: release
         run: npm publish
         env:
