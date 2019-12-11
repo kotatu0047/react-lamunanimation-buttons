@@ -117,7 +117,7 @@ module.exports = {
     ],
     'import/prefer-default-export': 'off',
     'import/no-extraneous-dependencies': ['error', {
-      devDependencies: ['**/*.test.tsx', '**/*.test.ts'],
+      devDependencies: ['spec/**', 'test/**', 'tests/**', '**/__tests__/**', '*.config.js', '**/*.test.tsx', '**/*.test.ts'],
       optionalDependencies: false,
     }],
 
