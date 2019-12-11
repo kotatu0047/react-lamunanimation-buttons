@@ -14,8 +14,8 @@ echo "add new tag to GitHub: ${TAG}"
 API_URL="https://api.github.com/repos/${REPO}/git/refs"
 
 curl -v -X POST $API_URL \
-  --header 'authorization: Bearer ${GITHUB_TOKEN}' \
-  --header 'content-type: application/json' \
+  --header "authorization: Bearer ${GITHUB_TOKEN}" \
+  --header "content-type: application/json" \
   -d @- << EOS
 {
   "ref": "refs/tags/${TAG}",
