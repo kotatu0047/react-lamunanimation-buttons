@@ -22,9 +22,9 @@ jobs:
           npm ci
       - name: check version and add tag
         env:
-          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
-          REPO: ${{github.repository}}
-          COMMIT: ${{github.sha}}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          REPO: ${{ github.repository }}
+          COMMIT: ${{ github.sha }}
         run: |
           chmod 777 ./addGitTag.sh
           sudo ./addGitTag.sh
