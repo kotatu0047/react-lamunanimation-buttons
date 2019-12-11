@@ -1,7 +1,5 @@
 #!/bin/bash
 
-echo $GITHUB_TOKEN
-
 # check this version is enable to release or not
 npx can-npm-publish
 if [ $? -eq 1 ] ; then
