@@ -26,8 +26,8 @@ jobs:
           REPO: ${{ github.repository }}
           COMMIT: ${{ github.sha }}
         run: |
-          chmod 777 ./addGitTag.sh
-          sudo ./addGitTag.sh
+          chmod 755 ./addGitTag.sh
+          ./addGitTag.sh
       - name: release
         run: npm publish
         env:

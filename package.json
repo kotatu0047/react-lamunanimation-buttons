@@ -1,6 +1,6 @@
 {
   "name": "react-lamunanimation-buttons",
-  "version": "0.0.8-beta",
+  "version": "0.1.0-beta",
   "description": "ReactJS Components of funky svg buttons",
   "main": "dist/index.js",
   "browser": "dist/index.js",
