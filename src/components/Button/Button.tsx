@@ -10,7 +10,7 @@ const Button: React.FC<Props> = ({ text, onClick }) => {
   return (
     <button
       type="button"
-      className={`${styles.primaryColors} ${styles.shape} ${styles.font}`}
+      className={`${styles.button} ${styles.primaryColors} ${styles.shape} ${styles.font}`}
       onClick={onClick}
     >
       {text}

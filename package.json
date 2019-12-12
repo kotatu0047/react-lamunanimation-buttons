@@ -17,7 +17,7 @@
     "type-check": "tsc --emitDeclarationOnly",
     "rollup": "rollup -c",
     "docs:build": "styleguidist build",
-    "postbuild": "rm ./dist/**/*.test.d.ts",
+    "postbuild": "find ./dist -type f -name \"*.test.d.ts\" -delete",
     "test": "jest",
     "test:dev": "jest --watch --no-coverage",
     "prepublishOnly": "npm run build"
