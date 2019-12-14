@@ -100,6 +100,7 @@ module.exports = {
     'react/jsx-uses-vars': 'error',
     'react/prop-types': 'off',
     'react/prefer-stateless-function': 'off',
+    "react/button-has-type": 'off',
 
     // react hooks
     'react-hooks/rules-of-hooks': 'error',

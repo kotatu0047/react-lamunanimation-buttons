@@ -98,7 +98,8 @@
     "webpack": "^4.41.2"
   },
   "dependencies": {
-    "core-js": "^2.6.11"
+    "core-js": "^2.6.11",
+    "react-spring": "^9.0.0-beta.34"
   },
   "husky": {
     "hooks": {

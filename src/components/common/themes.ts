@@ -1,0 +1,8 @@
+export const pink = '#f06292'
+export const deepPink = '#d81b60'
+export const blue = '#42a5f5'
+export const black = '#212121'
+export const purple = '#ce93d8'
+export const teal = '#1de9b6'
+export const deepPurple = '#7e57c2'
+export const deepTeal = '#045D56'
