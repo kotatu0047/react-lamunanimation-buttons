@@ -24,6 +24,7 @@
     "noUnusedParameters": true,
     "strict": true,
     "resolveJsonModule": true,
+    "downlevelIteration": true,
     "module": "esnext",
     "jsx": "react"
   },
