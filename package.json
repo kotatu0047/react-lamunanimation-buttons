@@ -12,7 +12,7 @@
     "start": "styleguidist server",
     "prebuild": "rimraf dist",
     "build": "npm-run-all --parallel lint:fix test:no-coverage type-check rollup docs:build",
-    "lint:fix": "eslint --ext ./ \"src/**/*.ts\"  --fix",
+    "lint:fix": "eslint --ext .ts,.tsx --fix src/",
     "test:no-coverage": "jest --no-coverage",
     "type-check": "tsc --emitDeclarationOnly",
     "rollup": "rollup -c",

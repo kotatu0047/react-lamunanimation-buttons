@@ -4,10 +4,11 @@ import { IconComponentProps, OverrideProps } from '../common/types/shared'
 
 type buttonType = 'submit' | 'button' | 'reset'
 
-interface ButtonBaseTypeMap {
+export interface ButtonBaseTypeMap {
   props: {
     disabled?: boolean
     type?: buttonType
+    children?: never
   }
 }
 

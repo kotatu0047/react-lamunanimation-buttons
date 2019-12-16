@@ -17,7 +17,6 @@ describe('getRadian', () => {
 describe('range', () => {
   test('get range 0-0', () => {
     const result = range(0, 0)
-    console.log(result)
 
     expect(result).toStrictEqual([0])
   })
