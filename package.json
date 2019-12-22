@@ -84,7 +84,7 @@
     "prettier": "^1.19.1",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
-    "react-styleguidist": "9.1.13",
+    "react-styleguidist": "^10.3.2",
     "rimraf": "^3.0.0",
     "rollup": "^1.27.9",
     "rollup-plugin-babel": "^4.3.3",
@@ -99,11 +99,6 @@
   },
   "dependencies": {
     "core-js": "^2.6.11",
-    "react-spring": "^9.0.0-beta.34"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "npm run build"
-    }
+    "react-spring": "^8.0.27"
   }
 }

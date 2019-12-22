@@ -1,14 +1,16 @@
 import React from 'react'
-import BorderFavIconPath from './BorderFavIconPath'
-import FillFavIconPath from './FillFavIconPath'
-import Fireworks from './Fireworks'
-import { black, blue, deepPink, pink } from '../common/themes'
-import { IconComponentProps } from '../common/types/shared'
+import BorderFavIconPath from './parts/BorderFavIconPath'
+import FillFavIconPath from './parts/FillFavIconPath'
+import Fireworks from './parts/Fireworks'
+import { black, blue, deepPink, pink } from '../../common/themes'
+import { IconComponentProps } from '../../common/types/shared'
+import commonStyles from '../../common/style.css'
+import styles from './FavoriteButton.css'
 
-const FavButton: React.FC<IconComponentProps> = ({ isHover, toggle }) => {
+const IconComponent: React.FC<IconComponentProps> = ({ isHover, toggle }) => {
   return (
     <svg
-      className="svg-root"
+      className={commonStyles.svgRoot}
       focusable
       role="img"
       aria-hidden="true"
@@ -21,7 +23,7 @@ const FavButton: React.FC<IconComponentProps> = ({ isHover, toggle }) => {
       {toggle && (
         <>
           <circle
-            className="ripple"
+            className={styles.ripple}
             strokeWidth={5}
             stroke={blue}
             fill="none"
@@ -30,7 +32,7 @@ const FavButton: React.FC<IconComponentProps> = ({ isHover, toggle }) => {
             r={7}
           />
           <circle
-            className="ripple"
+            className={styles.ripple}
             strokeWidth={1}
             stroke={blue}
             fill="none"
@@ -46,4 +48,4 @@ const FavButton: React.FC<IconComponentProps> = ({ isHover, toggle }) => {
   )
 }
 
-export default FavButton
+export default IconComponent

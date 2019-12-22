@@ -1,6 +1,6 @@
 import React from 'react'
 import { animated, useSpring } from 'react-spring'
-import { getRadian, range } from '../utilities/commonUtility'
+import { getRadian, range } from '../../../utilities/commonUtility'
 import {
   blue,
   deepPink,
@@ -9,7 +9,8 @@ import {
   pink,
   purple,
   teal,
-} from '../common/themes'
+} from '../../../common/themes'
+import styles from '../FavoriteButton.css'
 
 const getColor = (angle: number) => {
   switch (angle) {
@@ -79,7 +80,7 @@ const Fireworks: React.FC = () => {
         return (
           <React.Fragment key={angle}>
             <animated.line
-              className="firework1"
+              className={styles.firework1}
               x1={spring1.inner.interpolate(
                 (v: number): number =>
                   fire1CenterX + (v + lineLength) * Math.cos(radian),
@@ -100,7 +101,7 @@ const Fireworks: React.FC = () => {
               strokeWidth="1"
             />
             <animated.line
-              className="firework2"
+              className={styles.firework2}
               x1={spring2.inner.interpolate(
                 (v: number): number =>
                   fire2CenterX + (v + lineLength) * Math.cos(radian),
@@ -121,7 +122,7 @@ const Fireworks: React.FC = () => {
               strokeWidth="1"
             />
             <animated.line
-              className="firework3"
+              className={styles.firework3}
               x1={spring3.inner.interpolate(
                 (v: number): number =>
                   fire3CenterX + (v + lineLength) * Math.cos(radian),

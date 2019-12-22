@@ -1,0 +1,5 @@
+.svgRoot {
+  fill: currentColor;
+  user-select: none;
+  overflow: hidden;
+}

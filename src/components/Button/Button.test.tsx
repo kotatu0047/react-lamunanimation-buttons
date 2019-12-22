@@ -25,8 +25,23 @@ describe('Button', () => {
     const { container } = render(<Button text="Click Me!" />)
     const component = getByText(container, 'Click Me!')
 
+    expect(component.classList.contains('button')).toBe(true)
     expect(component.classList.contains('primaryColors')).toBe(true)
     expect(component.classList.contains('shape')).toBe(true)
     expect(component.classList.contains('font')).toBe(true)
+  })
+
+  test('Button snapshot test', () => {
+    const { container } = render(<Button text="Click Me!" />)
+    expect(container).toMatchInlineSnapshot(`
+      <div>
+        <button
+          class="button primaryColors shape font"
+          type="button"
+        >
+          Click Me!
+        </button>
+      </div>
+    `)
   })
 })
