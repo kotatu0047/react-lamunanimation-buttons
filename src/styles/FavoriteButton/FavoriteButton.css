@@ -28,21 +28,21 @@
 }
 
 .firework1 {
-  composes: display from "../../common/animations.css";
+  composes: display from "../animations.css";
   animation-delay: 550ms;
 }
 
 .firework2 {
-  composes: display from "../../common/animations.css";
+  composes: display from "../animations.css";
   animation-delay: 750ms;
 }
 
 .firework3 {
-  composes: display from "../../common/animations.css";
+  composes: display from "../animations.css";
   animation-delay: 950ms;
 }
 
 .fillFavIcon {
-  composes: bound-scale from "../../common/animations.css";
+  composes: bound-scale from "../animations.css";
   animation-delay: 300ms;
 }

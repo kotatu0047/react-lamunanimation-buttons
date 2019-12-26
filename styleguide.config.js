@@ -2,7 +2,7 @@ const path = require('path')
 const webpackConfig = require('./webpack.config')
 
 module.exports = {
-  components: 'src/components/**/*.{js,jsx,ts,tsx}',
+  components: 'src/components/**/*.tsx',
   webpackConfig,
   title: 'react-lamunanimation-buttons Components Library',
   styleguideDir: 'dist-docs',

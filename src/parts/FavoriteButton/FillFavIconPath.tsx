@@ -1,5 +1,5 @@
 import React from 'react'
-import styles from '../FavoriteButton.css'
+import styles from '../../styles/FavoriteButton/FavoriteButton.css'
 
 /**
  * original path by Material design icons

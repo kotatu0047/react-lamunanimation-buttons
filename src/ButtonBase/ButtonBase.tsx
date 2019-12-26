@@ -1,5 +1,5 @@
 import React, { useCallback, useState } from 'react'
-import { IconComponentProps, OverrideProps } from '../common/types/shared'
+import { IconComponentProps, OverrideProps } from '../types/shared'
 import styles from './ButtonBase.css'
 
 type buttonType = 'submit' | 'button' | 'reset'

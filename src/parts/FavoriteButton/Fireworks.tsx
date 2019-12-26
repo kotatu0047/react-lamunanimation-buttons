@@ -1,6 +1,6 @@
 import React from 'react'
 import { animated, useSpring } from 'react-spring'
-import { getRadian, range } from '../../../utilities/commonUtility'
+import { getRadian, range } from '../../utilities/commonUtility'
 import {
   blue,
   deepPink,
@@ -9,8 +9,8 @@ import {
   pink,
   purple,
   teal,
-} from '../../../common/themes'
-import styles from '../FavoriteButton.css'
+} from '../../styles/themes'
+import styles from '../../styles/FavoriteButton/FavoriteButton.css'
 
 const getColor = (angle: number) => {
   switch (angle) {
